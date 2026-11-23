@@ -92,8 +92,8 @@ function fadeScene(tile: number, scale: number, d: string): string {
     `<defs><pattern id="p" patternUnits="userSpaceOnUse" width="${tile}" height="${tile}">` +
     `<path class="line" fill-rule="evenodd" transform="scale(${scale})" d="${d}"/></pattern>` +
     '<linearGradient id="g" x1="1" y1="0" x2="0" y2="1">' +
-    '<stop offset="0" class="s" stop-opacity="0"/><stop offset="0.5" class="s" stop-opacity="0.8"/>' +
-    '<stop offset="0.85" class="s" stop-opacity="1"/></linearGradient></defs>' +
+    '<stop offset="0" class="s" stop-opacity="0.2"/><stop offset="0.35" class="s" stop-opacity="0.75"/>' +
+    '<stop offset="0.65" class="s" stop-opacity="1"/></linearGradient></defs>' +
     '<rect class="base" width="100%" height="100%"/><rect fill="url(#p)" width="100%" height="100%"/>' +
     '<rect fill="url(#g)" width="100%" height="100%"/></svg>'
   )
