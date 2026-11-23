@@ -1,0 +1,5 @@
+{
+  "name": "gies-tl",
+  "owner": { "name": "Gies Teaching & Learning" },
+  "plugins": [{ "name": "illinois-theme", "source": "./" }]
+}
