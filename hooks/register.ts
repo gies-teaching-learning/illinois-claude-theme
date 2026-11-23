@@ -55,10 +55,28 @@ const colors: ThemeColors = {
   },
 }
 
-const COLORS_ONLY: ThemeSetArgs = { colors }
+// The Illinois "finial" brand pattern (brand.illinois.edu, --il-pattern-finial), one 80-point tile,
+// drawn as a quiet line pattern over the page color so it follows light and dark mode.
+const FINIAL =
+  'M58.6,0H31h-2H1.4H0v1.4V29v2v27.6V60h1.4H29h2h27.6H60v-1.4V31v-2V1.4V0H58.6z M31,1h26.6L31,27.6V1z M29,1v26.6L2.4,1H29z M1,2.4L27.6,29H1V2.4z M1,57.6V31h26.6L1,57.6z M29,59H2.4L29,32.4V59z M31,59V32.4L57.6,59H31z M59,57.6L32.4,31H59V57.6z M59,29H32.4L59,2.4V29z'
+
+const BACKDROP: ThemeSetArgs['backdrop'] = {
+  vector: {
+    viewBox: 60,
+    size: [80, 80],
+    repeat: true,
+    paths: [
+      { d: 'M0 0H60V60H0Z', color: 'surface-0' },
+      { d: FINIAL, color: 'surface-3' },
+    ],
+  },
+}
+
+const COLORS_ONLY: ThemeSetArgs = { colors, backdrop: BACKDROP }
 
 const LOOK: ThemeSetArgs = {
   colors,
+  backdrop: BACKDROP,
   style: {
     Heading: { color: 'text-primary', fontWeight: 'bold' },
     UserMessage: {

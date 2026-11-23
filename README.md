@@ -1,6 +1,8 @@
 # Illinois theme
 
-A University of Illinois Urbana-Champaign look for the Claude desktop and mobile apps, built from the official brand palette at brand.illinois.edu. Light mode uses Illini Blue text on white and cool-gray surfaces with Altgeld orange as the accent; dark mode is a deep Illini Blue night with Illini Orange accents. Your own messages sit in an Illini Blue bubble with an orange edge. Core text colors meet WCAG AA (4.5:1) in both modes. It applies when a session starts; nothing to configure.
+A University of Illinois Urbana-Champaign look for the Claude desktop and mobile apps, built from the official brand palette at brand.illinois.edu. Light mode uses Illini Blue text on white and cool-gray surfaces with Altgeld orange as the accent; dark mode is a deep Illini Blue night with Illini Orange accents. Your own messages sit in an Illini Blue bubble with an orange edge. Core text colors meet WCAG AA (4.5:1) in both modes. Behind the chat is a quiet tiled version of the Illinois finial brand pattern (brand.illinois.edu `--il-pattern-finial`), redrawn as vector lines that follow light and dark mode. It applies when a session starts; nothing to configure.
+
+To get a new version after it's pushed: `claude plugin update illinois-theme@gies-tl`, then `/reload-plugins` or start a new session.
 
 ## Install
 
