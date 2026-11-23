@@ -1,6 +1,6 @@
 # Illinois theme
 
-A University of Illinois Urbana-Champaign look for the Claude desktop and mobile apps, built from the official brand palette at brand.illinois.edu. Light mode uses Illini Blue text on white and cool-gray surfaces with Altgeld orange as the accent; dark mode is a deep Illini Blue night with Illini Orange accents. Your own messages sit in an Illini Blue bubble with an orange edge. Core text colors meet WCAG AA (4.5:1) in both modes. Behind the chat is a quiet tiled version of the Illinois finial brand pattern (brand.illinois.edu `--il-pattern-finial`), redrawn as vector lines that follow light and dark mode. It applies when a session starts; nothing to configure.
+A University of Illinois Urbana-Champaign look for the Claude desktop and mobile apps, built from the official brand palette at brand.illinois.edu. Light mode uses Illini Blue text on white and cool-gray surfaces with Altgeld orange as the accent; dark mode is a deep Illini Blue night with Illini Orange accents. Your own messages sit in an Illini Blue bubble with an orange edge. Core text colors meet WCAG AA (4.5:1) in both modes. Behind the chat is the Illinois finial brand pattern (brand.illinois.edu `--il-pattern-finial`), redrawn as vector lines and muted by a white (light mode) or blue (dark mode) gradient so it shows at the top right and fades out behind the text, following the brand's guidance to use only single-color gradients. Change it any time with `/illinois-pattern`: `finial-fade` (default), `ascend-fade`, `finial`, `ascend` (the brand's 45-degree ascending lines) or `none`. It applies when a session starts; nothing to configure.
 
 To get a new version after it's pushed: `claude plugin update illinois-theme@gies-tl`, then `/reload-plugins` or start a new session.
 
@@ -32,5 +32,5 @@ From brand.illinois.edu: Illini Orange #FF5F05, Illini Blue #13294B, Altgeld #C8
 | --- | --- |
 | `.claude-plugin/plugin.json` | Plugin manifest |
 | `.claude-plugin/marketplace.json` | Makes this repo installable as a marketplace |
-| `hooks/register.ts` | The theme: colors, message style, and a `theme_status` diagnostic tool |
+| `hooks/register.tsx` | The theme: colors, message style, background patterns, the `/illinois-pattern` command and a `theme_status` diagnostic tool |
 | `hooks/make-colors.js` | Claude's palette builder, copied unchanged from the plugin-authoring skill |
