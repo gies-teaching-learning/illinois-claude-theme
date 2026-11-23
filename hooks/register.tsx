@@ -86,7 +86,7 @@ const PATTERNS: Record<PatternName, ThemeSetArgs['backdrop']> = {
 
 function fadeScene(tile: number, scale: number, d: string): string {
   return (
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">' +
+    '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">' +
     '<style>.base{fill:#F1F2F5}.line{fill:#DCE0E8}.s{stop-color:#F1F2F5}' +
     '@media (prefers-color-scheme: dark){.base{fill:#0A1729}.line{fill:#1A3360}.s{stop-color:#0A1729}}</style>' +
     `<defs><pattern id="p" patternUnits="userSpaceOnUse" width="${tile}" height="${tile}">` +
@@ -94,8 +94,8 @@ function fadeScene(tile: number, scale: number, d: string): string {
     '<linearGradient id="g" x1="1" y1="0" x2="0" y2="1">' +
     '<stop offset="0" class="s" stop-opacity="0"/><stop offset="0.5" class="s" stop-opacity="0.8"/>' +
     '<stop offset="0.85" class="s" stop-opacity="1"/></linearGradient></defs>' +
-    '<rect class="base" width="1600" height="1000"/><rect fill="url(#p)" width="1600" height="1000"/>' +
-    '<rect fill="url(#g)" width="1600" height="1000"/></svg>'
+    '<rect class="base" width="100%" height="100%"/><rect fill="url(#p)" width="100%" height="100%"/>' +
+    '<rect fill="url(#g)" width="100%" height="100%"/></svg>'
   )
 }
 
